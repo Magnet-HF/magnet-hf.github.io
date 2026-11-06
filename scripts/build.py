@@ -22,10 +22,10 @@ def read_page(path):
         raise ValueError(f'{path}: missing JSON metadata block')
     _, header, body = text.split('---', 2)
     meta = json.loads(header)
-    for key in ('title', 'description', 'section', 'updated'):
+    for key in ('title', 'description', 'section'):
         if not meta.get(key):
             raise ValueError(f'{path}: missing {key}')
-    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', meta['updated']):
+    if 'updated' in meta and not re.fullmatch(r'\d{4}-\d{2}-\d{2}', meta['updated']):
         raise ValueError(f'{path}: updated must be YYYY-MM-DD')
     return meta, body
 
@@ -48,6 +48,7 @@ def render(p, pages):
     title = html.escape(m['title']); desc = html.escape(m['description'],quote=True)
     hero = '' if not home else '<div class="hero-actions"><a class="button" href="/software/">Find software <span aria-hidden="true">→</span></a><a class="button secondary" href="/operational-guidance/">Set up your station</a></div><div class="home-stats"><span>11 tool pages</span><span>Official sources</span><span>Community guidance</span></div>'
     kicker = 'TOOLS & GUIDES' if home else m['section'].replace('-',' ').upper()
+    updated = f"<span>Page updated {m['updated']}</span>" if 'updated' in m else ''
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} · MagNet</title><meta name="description" content="{desc}">
@@ -61,7 +62,7 @@ def render(p, pages):
 <main id="main"><div class="eyebrow">MAGNET HF <span>/</span> {html.escape(kicker)}</div>
 <section class="page-heading {'home-heading' if home else ''}"><h1>{title}</h1><p class="lead">{desc}</p>{hero}</section>
 <article class="prose">{body}</article>
-<div class="page-meta"><span>Page updated {m['updated']}</span><a href="{edit}">Suggest an edit ↗</a></div></main></div>
+<div class="page-meta">{updated}<a href="{edit}">Suggest an edit ↗</a></div></main></div>
 <footer><span>MAGNET HF · Tools & Guides</span><span><a href="/contribute/">Help improve this library</a> · <a href="https://magnethf.com/contact-us/">Contact MagNet</a></span></footer></body></html>'''
 
 class Links(HTMLParser):

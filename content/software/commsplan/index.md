@@ -1,13 +1,13 @@
 ---
-{"title":"CommsPlan","description":"Bring frequency plans, schedules, radio applications, and received traffic into one station workspace.","section":"software","kind":"Station planning & operations","order":10,"updated":"2026-10-23"}
+{"title":"CommsPlan","description":"Bring frequency plans, schedules, radio applications, and received traffic into one station workspace.","section":"software","kind":"Station planning & operations","order":10}
 ---
 ## Get CommsPlan
 
-[CommsPlan website, downloads & guides](https://n1mag.github.io/CommsPlan/) · [Project repository](https://github.com/n1mag/CommsPlan) · [Releases](https://github.com/n1mag/CommsPlan/releases)
+[CommsPlan website, downloads & guides](https://n1mag.github.io/CommsPlan/) · [Project repository](https://github.com/n1mag/CommsPlan) · [Latest release & downloads](https://github.com/n1mag/CommsPlan/releases/latest) · [All releases](https://github.com/n1mag/CommsPlan/releases)
 
 ## Technical guidance
 
-**Currently suggested version: awaiting MagNet confirmation.** The project README identifies **2.0.7** as of October 23, 2026. This is publisher information, not an independent MagNet station test.
+Use the latest release page for the publisher’s current downloads and release notes.
 
 CommsPlan is station software; its website provides downloads and documentation. The project describes plans and scheduling, application integration, a common message library, mapping, and local-mesh services. Choose the platform package and follow the project's setup guide for your station.
 
