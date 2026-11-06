@@ -1,11 +1,11 @@
 ---
-{"title":"SpotterX — MagNet Edition","description":"A JS8Call companion for mapping, messages, forms, and station awareness.","section":"software","kind":"MagNet project","order":2,"updated":"2026-10-23"}
+{"title":"SpotterX — MagNet Edition","description":"A JS8Call companion for mapping, messages, forms, and station awareness.","section":"software","kind":"MagNet project","order":2,"updated":"2026-11-06"}
 ---
 ## Get SpotterX
 
-[Available SpotterX builds](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0)
+[Download SpotterX](https://github.com/Magnet-HF/SpotterX/releases) · [Setup and compatibility](https://github.com/Magnet-HF/SpotterX/blob/main/docs/setup.md) · [Report an issue](https://github.com/Magnet-HF/SpotterX/issues)
 
-**Repository transition:** the available build is currently hosted in Mag-Windows. The dedicated MAGNET-HF/SpotterX project is being prepared. This page keeps a working download destination until the new repository and copied release have been verified.
+The dedicated SpotterX repository hosts releases and project documentation. The [original Mag-Windows release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0) remains available.
 
 ## What it does
 
