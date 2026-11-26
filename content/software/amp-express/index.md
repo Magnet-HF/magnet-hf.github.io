@@ -1,14 +1,26 @@
 ---
-{"title":"AMP-Express","description":"A MagNet utility for preparing FLAMP relay files from message documents.","section":"software","kind":"MagNet utility","order":11,"updated":"2026-10-23"}
+{"title":"AMP-Express","description":"A MagNet utility for preparing FLAMP relay files from message documents.","section":"software","kind":"MagNet utility","order":11,"updated":"2026-11-26"}
 ---
+AMP-Express prepares files for FLAMP without transmitting. It encodes a message document into the compressed, checksummed AMP-2 blocks FLAMP sends, wraps them as an FLMSG relay file (`.b2s`) ready for the relay workflow, and can clear-sign the original with the operator's own PGP key.
+
 ## Get the utility
 
-[Existing AMP-Express release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/Amp-Express-v1.0)
+- [Downloads](https://github.com/Magnet-HF/AMP-Express/releases): choose the newest release and download the zip under **Assets**.
+- [Setup and documentation](https://github.com/Magnet-HF/AMP-Express#readme)
+- [Report a problem](https://github.com/Magnet-HF/AMP-Express/issues)
+
+## Prerequisites
+
+- Windows 10 or 11. The installer sets up Python if needed.
+- A callsign.
+- For signing only: your own exported PGP private key. No key is supplied with AMP-Express.
+
+Linux installation is documented in the application README. Detailed requirements, installation and troubleshooting are maintained there.
 
 ## Technical guidance
 
-**Currently suggested version: awaiting maintainer confirmation.** The available release is tagged **Amp-Express-v1.0** and includes a Python script.
+**MagNet-tested version: not yet recorded.** Version-specific changes are listed in each release's notes.
 
-The release describes preparing FLAMP relay files and converted, signed FLMSG documents. Follow the maintainer's requirements for Python, dependencies, and signing configuration. Supported platforms and an installation procedure have not yet been documented in this library.
+## Historical download
 
-AMP-Express is retained in this directory because it is already published by MagNet. It can receive its own project repository when its maintainer establishes a separate development and release lifecycle.
+[Original AMP-Express v1.0 release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/Amp-Express-v1.0) in the Mag-Windows repository.
